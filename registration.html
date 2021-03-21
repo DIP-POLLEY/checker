@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="css_registration.css">
+</head>
+<body>
+    <section class=pg0>
+      <h1>Seller Registration Form</h1>
+    </section>
+    <section class=pg1 >
+        <form name=regd >
+       
+        <div class="swiper-container">
+            <div class="swiper-wrapper"id=blured>
+              <div class="swiper-slide">
+                
+                <div class="cntnr">
+                  <div class=pgsbr>
+                    <p style="border-bottom: 5px solid #4286f4;">Personal</p>
+                    <p>Store</p>
+                    <p>Billing</p>
+                  </div>
+                    <label for="nam">Full Name* </label>
+                    <input type="text" id="nam" placeholder="Name"required/>
+                    <br>
+
+                    <label for="eml">Email Id*</label>
+                    <input type="email" id="eml" placeholder="Mail Id"required/>
+                    <br>
+                    <label class="dis" for="myFile">Profile Picture*</label>
+                    <input type="file" id="myFile" name="Profile Picture"required ><br>
+                    <a class="bt1">Continue</a>
+                </div>
+
+              </div>
+              <div class="swiper-slide">
+                <div class=cntnr>
+                  <div class=pgsbr>
+                    <p>Personal</p>
+                    <p style="border-bottom: 5px solid #2a559b;">Store</p>
+                    <p>Billing</p>
+                  </div>
+                    <label for="stor">Store Name*</label>
+                    <input type="text" id="stor" placeholder="Store Name"required/><br>
+
+                    <label for="adrs">Store Address*</label>
+                    <input type="text" id="adrs" placeholder="Address"required/><br>
+
+                    <label for="cnct1">Contact Number*</label>
+                    <input type="tel" id="cnct1" placeholder="+91 98359 47483"required/><br>
+
+                    <label for="cnct2">Alternate Number</label>
+                    <input type="tel" id="cnct2" placeholder="+91 93224 47483"/><br><br>
+                    <a class="bt1">Continue</a>
+                    <a class="bt2">Previous</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="cntnr">
+                  <div class=pgsbr>
+                    <p>Personal</p>
+                    <p >Store</p>
+                    <p style="border-bottom: 5px solid #193157;">Billing</p>
+                  </div>
+                    <label for="pn">PAN Number*</label>
+                    <input type="text" id="pn" placeholder="PAN"required/><br>
+        
+                    <label for="adr">Adhar Number*</label>
+                    <input type="text" id="adr" placeholder="ADHAR NO."required/><br>
+        
+                    <label for="gst">GSTIN</label>
+                    <input type="text" id="gst" placeholder="GST NO"/><br>
+                    <input type="checkbox" class="check">
+                    <span class="hn"><p>Click here to accept all conditions and state all shared informations provided are legal. Any discripancies found would lead to legal action.</p></span>
+                    <br><br>
+                    <a class="bt2">Previous</a>
+                    <input class="procd"type="submit" value="Submit" onclick=check()>
+                </div>
+              </div>
+              
+            
+            </div>
+
+        </div>
+        </form>
+        
+    </section>
+
+    <footer class=ftr>
+
+    </footer>
+
+
+
+
+    <script src="swiper.min.js"></script>
+    <script type="text/javascript">
+      function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      }
+      function check()
+      {
+        var a = document.forms["regd"]["nam"].value;
+        var b = document.forms["regd"]["eml"].value;
+        var c = document.forms["regd"]["myFile"].value;
+        var d = document.forms["regd"]["stor"].value;
+        var e = document.forms["regd"]["adrs"].value;
+        var f = document.forms["regd"]["cnct1"].value;
+        var g = document.forms["regd"]["pn"].value;
+        var h = document.forms["regd"]["adr"].value;
+        var i = document.forms["regd"]["gst"].value;
+
+        if( a == null || a == "")
+        {
+          alert("Error Name Field empty: \n Please traverse back to provide name "+a);
+        }
+        else if(b == "" || b == null || !validateEmail(b))
+        {
+          alert("Invalid email address.\nProvide a valid email address.");
+        }
+        else if(c == null||c == "")
+        {
+          alert("Error!\nProfile picture not uploaded."+a);
+        }
+        else if(d == null||d == "")
+        {
+          alert("Error!\nStore name not found.");
+        }
+        else if(e == null||e == "")
+        {
+          alert("Address not found");
+        }
+        else if(f == null||f == "")
+        {
+          alert("Invalid phone number.")
+        }
+        
+      }
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          navigation: {
+            nextEl: '.bt1',
+            prevEl: '.bt2',
+          },
+        });
+    </script>
+</body>
+</html>
+
+<!-- Full Name
+Store name 
+Email id
+Contact number
+Alternate number (not mandatory) 
+Address (full) 
+Pan No.
+Aadhar No. 
+Gstin (if there ,  not mandatory)
+Picture (nijeder profile er) 
+Consent Form  -->

@@ -1,0 +1,281 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    /* text-align: center; */
+    background:rgb(255, 255, 255);
+    width: 60vw;
+    margin-bottom: 10vh;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+.pg0
+{
+  max-width:100vw;
+  background-color:rgb(230, 227, 227);
+}
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
+.pg0 h1
+{
+  text-align: center;
+  color: rgb(2, 2, 5);
+  font-size: 2.5em;
+  font-family: 'Tinos', serif;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  font-style: italic;
+}
+.pgsbr
+{
+  display: flex;
+  text-align: center;
+
+}
+.pgsbr p
+{
+  width: 20vw;
+  height: 7vh;
+}
+form
+{
+  font-size: 1.5em;
+  color: rgb(38, 38, 92);
+ 
+}
+.cntnr
+{
+  padding-top: 5vh;
+  width: 60vw;
+  background-color: rgb(255, 255, 255);
+  display: inline;
+  box-shadow:  3px 3px 5px 6px rgb(202, 202, 202);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+#nam,#eml,#stor,#adrs,#cnct1,#cnct2,#pn,#adr,#gst
+{
+  margin-top: 10vh;
+  border: none;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 25vw;
+  border-bottom: 2px solid rgb(56, 61, 129);
+  background: transparent;
+  color: rgb(48, 48, 48);
+ }
+#myFile
+{
+  margin-top: 10vh;
+  margin-left: 10vw;
+  border: none;
+  /* font-size: 1em; */
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 25vw;
+  background: transparent;
+  color: rgb(48, 48, 48);
+}
+#nam
+{
+  margin-left: 10vw;
+}
+#eml
+{
+  margin-left: 11.25vw;
+}
+#stor
+{
+  margin-left: 12vw;
+}
+#adrs
+{
+  margin-left: 10vw;
+}
+#cnct1
+{
+  margin-left: 8vw;
+}
+#cnct2
+{
+  margin-left: 7.5vw;
+}
+#pn
+{
+  margin-left: 7.5vw;
+}
+#adr
+{
+  margin-left: 6.5vw;
+}
+#gst
+{
+  margin-left: 13vw;
+}
+.bt1
+{
+  float: right;
+  background-image: linear-gradient(to right,#373B44,#4286f4);
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 5vh;
+}
+.bt2
+{
+  float: left;
+  background-image: linear-gradient(to right,#373B44,#4286f4);
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 5vh;
+}
+.procd
+{
+  display: none;
+  float: right;
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-size: 1em;
+  border: 2px solid rgb(1, 218, 84);
+  color: rgb(1, 218, 84);
+  font-weight: bold;
+  transition: 0.88s;
+  background-color: transparent;
+}
+.procd:hover
+{
+  background-color: rgb(1, 218, 84);
+  color: white;
+  
+}
+.check
+{
+  position: relative;
+	margin-top: 7vh;
+	width:50px;
+}
+.check:before
+{
+	content: '';
+	position:absolute;
+	width:50px;
+	height:25px;
+	background: #333;
+	border-radius: 25px;
+}
+.check:checked:before
+{
+	background: rgb(1, 28, 146);
+}
+.check:after
+{
+	content: '';
+	position:absolute;
+	width:25px;
+	height:25px;
+	background: #fff;
+	border-radius: 25px;
+	transition: 3s;
+	border: 2px solid #333;
+	box-sizing: border-box;
+}
+.check:checked:after
+{
+	left: 25px;
+	border: 2px solid rgb(24, 62, 230);
+
+}
+
+.check:checked ~ .procd
+{
+	display:block;
+}
+.hn p
+{
+  margin-top: 2vh;
+  text-align: justify;
+  color: #373B44;
+  font-size: 0.75em;
+}
+.ftr
+{
+  height: 10vh;
+  background-color: #26335f;
+}
+
+@media (max-width: 858px)
+{
+  .cntnr {
+    width: 99vw;
+  }
+  label
+  {
+    display: none;
+  }
+  #nam,#eml,#stor,#adrs,#cnct1,#cnct2,#pn,#adr,#gst
+  {
+    text-align: center;
+    width: 75vw;
+    margin-left: 10vw;
+  }
+  .dis{
+    display: block;
+    margin-top: 5vh;
+    margin-left: 10vw;
+  }
+  #myFile
+  {
+  margin-top: 2vh;
+  margin-left: 10vw;
+  border: none;
+  /* font-size: 1em; */
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100vw;
+  background: transparent;
+  color: rgb(48, 48, 48);
+  }
+  .pgsbr
+{
+  display: flex;
+  text-align: center;
+
+}
+.pgsbr p
+{
+  width: 30vw;
+  height: 7vh;
+}
+}
